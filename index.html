@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calming Sounds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sound-container">
+        <button id="toggle-all-sounds" onclick="toggleAllSounds()">Play All</button>
+
+        <div class="sound-control">
+            <label for="rain">Rain</label>
+            <input type="range" id="rain-volume" min="0" max="1" step="0.01" value="0.5">
+            <button onclick="toggleSound('rain')">Play/Pause</button>
+        </div>
+        <div class="sound-control">
+            <label for="water">Water</label>
+            <input type="range" id="water-volume" min="0" max="1" step="0.01" value="0.5">
+            <button onclick="toggleSound('water')">Play/Pause</button>
+        </div>
+        <div class="sound-control">
+            <label for="thunder">Thunder</label>
+            <input type="range" id="thunder-volume" min="0" max="1" step="0.01" value="0.5">
+            <button onclick="toggleSound('thunder')">Play/Pause</button>
+        </div>
+    </div>
+
+    <audio id="rain" loop>
+        <source src="sounds/rain.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="water" loop>
+        <source src="sounds/water.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="thunder" loop>
+        <source src="sounds/thunder.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
